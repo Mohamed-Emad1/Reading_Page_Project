@@ -12,12 +12,23 @@
     <!-- Search START -->
     <div class="search">
         <div class="container">
+            <div class="choose">
+                <ul class="category">
+                    <li><a href="#">أدب</a></li>
+                    <li><a href="#">فلسفة</a></li>
+                    <li><a href="#">لغة</a></li>
+                    <li><a href="#">موسيقي</a></li>
+                    <li><a href="#">فن</a></li>
+                    <li class="all"><a href="#">الكل</a></li>
+                </ul>
+            </div>
             <h2>نتائج البحث عن : قرائة</h2>
             <div class="list">
                 <div class="text">
                     <h2>الأقسام</h2>
                     <ul class="links">
                         <li><a href="#">أدب</a></li>
+                        <li><a href="#">فلسفة</a></li>
                         <li><a href="#">لغة</a></li>
                         <li><a href="#">موسيقي</a></li>
                         <li><a href="#">فن</a></li>
@@ -27,7 +38,7 @@
 
                 <div class="boxes">
                 <div class="box">
-                    <img src="../assets/Rectangle_11rd.png" alt="">
+                    <img src="../assets/Rectangle_114.png" alt="">
                     <div class="text">
                     <p>كتب بواسطة : أحمد السيد</p>
                     <h2>فوائد القراءة اليومية</h2>
@@ -69,7 +80,7 @@
      </div>
 
      <div class="box">
-         <img src="../assets/Rectangle_114.png" alt="">
+         <img src="../assets/Rectangle_11rd.png" alt="">
          <div class="text">
          <p>كتب بواسطة : أحمد السيد</p>
          <h2>فوائد القراءة اليومية</h2>
@@ -143,13 +154,20 @@ import TheEnd from '@/components/TheEnd.vue';
 .search .container .list > .text .links{
     margin-top: 15px;
 }
+
 .search .container .list > .text .links li{
     margin-top: 15px;
     font-size: 20px;
     font-weight: 400;
 }
+
 .search .container .list > .text .links li a{
     color: var(--text-color);
+    transition-delay: 0.5s;
+    transition: 0.5s;
+}
+.search .container .list > .text .links li:hover a{
+    color: #EED600;
 }
 @media(max-width:767px){
     .search .container .list > .text{
@@ -251,6 +269,40 @@ import TheEnd from '@/components/TheEnd.vue';
 }
 .search .container .list .box .text .last .third{
     color: #ED0287;
+}
+.search .container .choose {
+    display: none;
+}
+@media(max-width:991px){
+    .search .container .list > .text{
+        display: none;
+    }
+    .search .container .choose {
+        display: block;
+    }
+    .search .container .choose .category{
+        display: flex;
+        justify-content: space-evenly;
+
+
+    }
+    .search .container .choose .category li{
+        background-color: #eee;
+        padding: 10px 35px;
+    }
+    .search .container .choose .category li a{
+        color: black;
+        transition-delay: 0.5s;
+        transition: 0.5s;
+    }
+    .search .container .choose .category li:hover a{
+        color: #EED600;
+        
+    }
+    .search .container .choose .category li:hover {
+        background-color: white;
+        border: 2px solid #EED600;
+    }
 }
 /* END SEARCH */
 
