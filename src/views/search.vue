@@ -27,7 +27,7 @@
 
                 <div class="boxes">
                 <div class="box">
-                    <img src="/images/Rectangle 11r.png" alt="">
+                    <img src="../assets/Rectangle_11rd.png" alt="">
                     <div class="text">
                     <p>كتب بواسطة : أحمد السيد</p>
                     <h2>فوائد القراءة اليومية</h2>
@@ -39,21 +39,9 @@
          </div>
      </div>
      </div>
+
      <div class="box">
-         <img src="/images/Rectangle 11man.png" alt="">
-         <div class="text">
-         <p>كتب بواسطة : أحمد السيد</p>
-         <h2>فوائد القراءة اليومية</h2>
-         <p>لقراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن أن تؤثر بشكل إيجابي على حياتنا.</p>
-         <p class="phone">القراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية.</p>
-         <div class="last">
-             <p>2 فبراير 5 دقائق قراءة</p>
-             <p class="second">فن</p>
-         </div>
-     </div>
-     </div>
-     <div class="box">
-         <img src="/images/Rectangle 113.png" alt="">
+         <img src="../assets/Rectangle_11_man.png" alt="">
          <div class="text">
          <p>كتب بواسطة : أحمد السيد</p>
          <h2>فوائد القراءة اليومية</h2>
@@ -65,8 +53,23 @@
          </div>
      </div>
      </div>
+
      <div class="box">
-         <img src="/images/Rectangle 114.png" alt="">
+         <img src="../assets/Rectangle_113.png" alt="">
+         <div class="text">
+         <p>كتب بواسطة : أحمد السيد</p>
+         <h2>فوائد القراءة اليومية</h2>
+         <p>لقراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن أن تؤثر بشكل إيجابي على حياتنا.</p>
+         <p class="phone">القراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية.</p>
+         <div class="last">
+             <p>2 فبراير 5 دقائق قراءة</p>
+             <p class="second">فن</p>
+         </div>
+     </div>
+     </div>
+
+     <div class="box">
+         <img src="../assets/Rectangle_114.png" alt="">
          <div class="text">
          <p>كتب بواسطة : أحمد السيد</p>
          <h2>فوائد القراءة اليومية</h2>
@@ -91,7 +94,6 @@
 import navPar from '@/components/navPar.vue';
 import TheEnd from '@/components/TheEnd.vue';
     export default {
-    name: search,
     components: {
         navPar,
         TheEnd,
@@ -102,10 +104,9 @@ import TheEnd from '@/components/TheEnd.vue';
 <style scoped>
 .search{
     padding-top: var(--main-padding);
-    margin-top: 100px;
 }
 .search .container > h2{
-    text-align: center;
+    text-align: right;
     font-size: 32px;
     font-weight: 400;
     
@@ -172,20 +173,23 @@ import TheEnd from '@/components/TheEnd.vue';
     display: flex;
     justify-content: start;
     align-items: center;
-    max-width: 100%;
+    max-width: 98%;
+    max-height: 50%;
 }
 .search .container .list .box img{
     margin-top: 40px;
-    max-width: 100%;
+    max-width: 80%;
+    max-height: 100%;
 }
 @media(max-width:991px){
     .search .container .list .box img{
-        width: 50%;
+        width: 80%;
     }
 }
 @media(max-width:767px){
     .search .container .list .box img{
-        width: 61%;
+        width: 55%;
+        height:100%;
     }
 }
 .search .container .list .box .text{
@@ -194,7 +198,7 @@ import TheEnd from '@/components/TheEnd.vue';
 @media(max-width:767px){
     .search .container .list .box .text{
         width: 50%;
-        height: 100%;
+        max-height: 50%;
     }
 
 }
@@ -220,16 +224,19 @@ import TheEnd from '@/components/TheEnd.vue';
     }
 }
 .search .container .list .box .text h2{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 15px;
 }
 @media(max-width:767px){
     .search .container .list .box .text h2{
-        font-size: 20px;
+        font-size: 16px;
     }
     .search .container .list .box .text p{
-        font-size: 12px;
+        font-size: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 15px;
     }
 }
 .search .container .list .box .text .last{

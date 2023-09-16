@@ -196,8 +196,9 @@
 </template>
 
 <script>
+import navPar from '@/components/navPar.vue';
+import TheEnd from '@/components/TheEnd.vue';
     export default {
-         name: useful,
     components: {
         navPar,
         TheEnd,

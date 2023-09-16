@@ -49,8 +49,12 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router';
 export default {
-  mounted() {
+  
+  mounted()
+  {
+    const router = useRouter();
     let btn = document.querySelector('.toggle-menu');
     let mobile = document.querySelector('.mobile');
 
@@ -80,7 +84,7 @@ export default {
 
     search1.addEventListener('input', function () {
       if (search1.value === "قرائة" || search1.value === "قراءة") {
-        window.open("/search.html", "_self"); //edit to open the search vue?
+        router.push('/search');
       }
     });
   }
