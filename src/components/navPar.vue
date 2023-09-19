@@ -44,8 +44,6 @@
          </div>
        </div>
      </header>
-
-
 </template>
 
 <script>
@@ -121,6 +119,7 @@ header {
 header .container {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -276,6 +275,7 @@ header .container .logo img {
   }
 }
 /* END HEADER */
+
 
 
 </style>

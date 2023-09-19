@@ -253,7 +253,9 @@ export default {
   };
 </script>
 
-<style scoped>
+
+
+<style>
 /* START USEFUL */
 .useful{
   padding-bottom: var(--main-padding)
@@ -283,13 +285,26 @@ export default {
   font-size: 60px;
   font-weight: 600;
   margin-bottom: 30px;
+  position: relative;
+}
+.useful .container .text > h2::before{
+  content: '';
+    position: absolute;
+    width: 141px;
+    height: 2px;
+    background-color: #EED600;
+    top: 116px;
 }
 @media(max-width:767px){
   .useful .container .text > h2{
     font-size: 30px;
   font-weight: 500;
   }
-
+  .useful .container .text > h2::before{
+    top: 70px;
+    left: 76px;
+    width: 223px;
+  }
 }
 .useful .container .text .last{
   display: flex;
@@ -336,7 +351,22 @@ export default {
 
 
 /* START MORE */
-.more {
+
+#app .more .container .heading{ 
+    display: none;
+  }
+  #app .more .container .heading-new{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #app .more .container .heading-new p{
+    color: var(--main-paragraph-color);
+  }
+
+
+
+/* .more {
   padding-bottom: var(--main-padding);
 }
 
@@ -427,7 +457,7 @@ export default {
     width: 95%;
   }
   
-}
+} */
 
 /* END MORE */
 
@@ -551,5 +581,6 @@ export default {
 
 
 /* END REVIEW */
+
 
 </style>

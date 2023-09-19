@@ -190,4 +190,5 @@ import { useRouter } from 'vue-router';
   letter-spacing: 0em;
   text-align: right;
 }
+
 </style>

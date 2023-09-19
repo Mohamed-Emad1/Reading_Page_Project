@@ -43,8 +43,13 @@ ul {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
 }
-
+/* @media (min-width: 390px) {
+    .container {
+        width: 340px;
+    }
+} */
 @media (min-width: 768px) {
     .container {
         width: 750px;

@@ -123,14 +123,15 @@
 }
 .hint .container .box{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 .hint .container .box h2{
     font-size: 43px;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .hint .container .box p{
     width: 90%;
@@ -154,7 +155,17 @@
     
 }
 .hint .container .see h2{
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 400;
 }
+
+/* @media(max-width:767px){
+    .hint .container .text h2 span .gradient::before{
+
+    }
+} */
+
+
 /* END HINT */
+
 </style>

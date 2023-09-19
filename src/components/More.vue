@@ -15,6 +15,10 @@
               <h2>الأكثر<span class="gradient"> قراءة</span></h2>
               <a href="">عرض الجميع</a>
             </div>
+            <div class="heading-new">
+              <a href=""><p>إقرأ المزيد</p></a>
+              <h2>مواضيع ذات صلة</h2>
+            </div>
             <div class="list">
               <div class="box">
                 <div class="image">
@@ -70,6 +74,13 @@
   justify-content: space-around;;
   align-items: start;
   margin-bottom: 30px;
+}
+.more .container .heading-new{
+  display: flex;
+  justify-content: space-around;;
+  align-items: start;
+  margin-bottom: 30px;
+  display: none;
 }
 .more .container .heading h2 {
   font-size: 40px;
@@ -145,5 +156,6 @@
 }
 
 /* END MORE */
+
 
 </style>

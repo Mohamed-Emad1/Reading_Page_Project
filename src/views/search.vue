@@ -196,8 +196,29 @@ export default {
         align-items: center;
     }
 }
-.search .container .list  .text{
+.search .container .list > .text{
     grid-template-columns: 1/1/2/2;
+    position: relative;
+}
+
+.search .container .list > .text::before{
+    content: '';
+    position: absolute;
+    width: 61px;
+    height: 2px;
+    background-color: #EED600;
+    top: 60px;
+}
+.search .container .list > .text::after{
+    content: '';
+    position: absolute;
+    width: 366px;
+    height: 2px;
+    background-color: #00000026;
+    top: 403px;
+    left: 51px;
+    transform: rotate(-90deg);
+    transform-origin: 0% 0%;
 }
 .search .container .list > .text > h2{
     font-size: 32px;
