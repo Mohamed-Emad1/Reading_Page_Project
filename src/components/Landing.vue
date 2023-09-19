@@ -17,7 +17,7 @@
 <path d="M15.8574 15.8574L21 21.0001" stroke="#383838" stroke-miterlimit="10" stroke-linecap="round"/>
 </g>
 </svg></i>
-              <input type="text" placeholder="بحث" id="search2"/>
+              <input type="text" placeholder="بحث" id="search2">
             </form>
             <div class="boxes">
               <div class="two">
@@ -43,7 +43,7 @@
                 </div>
               </div>
               <div class="box">
-                <router-link to="/about"><img src="../assets/Rectangle_2.png" alt="" class="img2" /></router-link>
+                <a href="" id="use"><img src="../assets/Rectangle_2.png" alt="" class="img2" /></a>
                 
                 <div class="text">
                   <div class="paragraph">
@@ -60,8 +60,26 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router';
     export default {
-        
+  mounted()
+  {
+        const router = useRouter();
+        let search2 = document.getElementById('search2');
+        search2.addEventListener('input', function () {
+      if (search2.value === "قرائة" || search2.value === "قراءة") {
+        router.push('/search');
+      }
+        });
+
+
+        let imageToUseful = document.getElementById("use");
+        imageToUseful.onclick = function (e)
+        {
+          e.preventDefault();
+          router.push('/useful')
+        }
+  }
     }
 </script>
 

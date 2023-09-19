@@ -73,6 +73,15 @@
     margin-right: 10px;
     max-width: 21%;
 }
+@media(max-width:767px){
+    .team .container .list{
+        flex-direction: column;
+
+    }
+    .team .container .list .box{
+        max-width: 100%;
+    }
+}
 .team .container .list .box img{
     max-width: 100%;
 }
@@ -90,6 +99,17 @@
     letter-spacing: 0em;
     text-align: right;
     color: var(--main-paragraph-color);
+}
+@media(max-width:767px){
+    .team .container .list .box {
+        text-align: center;
+    }
+    .team .container .list .box h2,.team .container .list .box p{
+        text-align: center;
+    }
+    .team .container .list .box p{
+        margin-bottom: 10px;
+    }
 }
 /* END TEAM */
 </style>

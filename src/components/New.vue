@@ -75,14 +75,17 @@
 @media(max-width:767px){
   .new .container .heading {
     justify-content: space-evenly;
+    flex-direction: column;
   }
   .new .container .heading h2 {
-    font-size: 26px;
+    font-size: 23px;
+    margin-bottom: 20px;
   }
 }
 .new .container .heading a {
   color: var(--main-color);
   font-size: 20px;
+  margin-top: 8px;
 }
 .new .container .sections .section {
   display: flex;
@@ -99,6 +102,9 @@
   .new .container .sections .section .image img {
     height: 180px;
   }
+  .new .container .sections .section .image {
+  margin-bottom: 0px;
+}
 }
 .new .container .sections .section .text {
   display: flex;
@@ -116,6 +122,11 @@
   margin-top: 15px;
   font-size: 35px;
   font-weight: normal;
+}
+@media (max-width: 767px) {
+  .new .container .sections .section .text h2 {
+    font-size: 20px;
+  }
 }
 .new .container .sections .section .text a {
   color: var(--main-color);

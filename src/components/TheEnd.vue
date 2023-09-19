@@ -145,36 +145,48 @@ footer .container .boxes {
     content: "";
     position: absolute;
     height: 3px;
-    width: 440px;
+    width: 350px;
     background-color: var(--border-color);
     left: 14px;
-    top: 80px;
+    top: 86px;
     z-index: -1;
   }
   footer p::after{
     content: "";
     position: absolute;
     height: 3px;
-    width: 440px;
+    width: 350px;
     background-color: var(--border-color);
     right: 19px;
-    top: 80px;
+    top: 86px;
     z-index: -1;
   }  
 
+  @media(max-width:991px){
+    footer p::before{
+      top: 84px;
+    width: 220px;
+    left: 34px;
+    }
+    footer p::after{
+      top: 84px;
+    width: 220px;
+    right: 34px;
+    }
+  }
   @media(max-width:767px){
     footer p {
         padding: 0px;
     }
     footer p::before{
-        top: 9px;
-        width: 80px;
-        left: -5px;
+      top: 14px;
+    width: 50px;
+    left: 10px;
     }
     footer p::after{
-        top: 9px;
-        width: 80px;
-        right: -5px;
+      top: 14px;
+    width: 50px;
+    right: 10px;
     }
 }
   

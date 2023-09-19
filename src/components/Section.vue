@@ -13,7 +13,7 @@
           <div class="container">
             <h3 class="head"><span class="gradient">الأقسام</span></h3>
             <div class="gallery">
-              <img src="../assets/Arrow_2.png" alt="" id="arrow" />
+              <!-- <img src="../assets/Arrow_2.png" alt="" id="arrow" /> -->
               <div class="list">
                 <div class="element">
                   <img src="../assets/Rectangle_10.png" alt="" />
@@ -51,7 +51,7 @@
                   <h2>فلسفة</h2>
                 </div>
               </div>
-              <img src="../assets/Arrow_1.png" alt="" id="bearrow" />
+              <!-- <img src="../assets/Arrow_1.png" alt="" id="bearrow" /> -->
             </div>
           </div>
         </div>
@@ -124,7 +124,8 @@
 }
 @media(max-width:767px){
   .sections .container .gallery{
-    max-width: 86%;
+    max-width: 100%;
+    justify-content: center;
   }
   .sections .container .gallery > img:nth-child(1) {
     margin-left: -62px;

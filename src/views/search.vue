@@ -1,4 +1,8 @@
 <template>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
      <link rel="stylesheet" href="../assets/font.css" />
      <link rel="stylesheet" href="../assets/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,16 +16,29 @@
     <!-- Search START -->
     <div class="search">
         <div class="container">
-            <div class="choose">
-                <ul class="category">
-                    <li><a href="#">أدب</a></li>
-                    <li><a href="#">فلسفة</a></li>
-                    <li><a href="#">لغة</a></li>
-                    <li><a href="#">موسيقي</a></li>
-                    <li><a href="#">فن</a></li>
-                    <li class="all"><a href="#">الكل</a></li>
-                </ul>
-            </div>
+
+            <!-- <swiper
+    :modules="modules"
+    :slides-per-view="3"
+    :space-between="50"
+    navigation
+    :pagination="{ clickable: true }"
+    :scrollbar="{ draggable: true }"
+    @swiper="onSwiper"
+    @slideChange="onSlideChange"
+  >
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    ...
+  </swiper> -->
+
+
+
+
+
+
+
             <h2>نتائج البحث عن : قرائة</h2>
             <div class="list">
                 <div class="text">
@@ -95,6 +112,16 @@
             </div>
 
             </div>
+            <div class="pagination">         
+                <a class="active" href="#">التالي</a>
+                <a href="#">10</a>
+                <a href="#">...</a>
+                <a href="#">4</a>
+                <a href="#">3</a>
+                <a  href="#">2</a>
+                <a class="active" href="#">1</a>
+                <a href="#" style="color: var(--main-color); background-color: #EBEBEB82;">السابق</a>
+   </div>
         </div>
     </div>
      <TheEnd/>
@@ -104,12 +131,38 @@
 <script>
 import navPar from '@/components/navPar.vue';
 import TheEnd from '@/components/TheEnd.vue';
-    export default {
-    components: {
-        navPar,
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+  import 'swiper/css/scrollbar';
+
+export default {
+  components: {
+    navPar,
         TheEnd,
-    }         
-    }
+        components: {
+            Swiper,
+                SwiperSlide,
+    },
+  },
+  setup() {
+      const onSwiper = (swiper) => {
+        console.log(swiper);
+      };
+      const onSlideChange = () => {
+        console.log('slide change');
+      };
+      return {
+        onSwiper,
+        onSlideChange,
+        modules: [Navigation, Pagination, Scrollbar, A11y],
+      };
+    },
+    
+};
+
 </script>
 
 <style scoped>
@@ -270,41 +323,82 @@ import TheEnd from '@/components/TheEnd.vue';
 .search .container .list .box .text .last .third{
     color: #ED0287;
 }
-.search .container .choose {
+.search .container .swiper {
     display: none;
 }
 @media(max-width:991px){
     .search .container .list > .text{
         display: none;
     }
-    .search .container .choose {
+}
+/* END SEARCH */
+/* START SWIPER */
+
+@media(max-width:991px){
+    .search .container .swiper {
         display: block;
     }
-    .search .container .choose .category{
+    .search .container .swiper .swiper-wrapper{
         display: flex;
         justify-content: space-evenly;
 
 
     }
-    .search .container .choose .category li{
+    .search .container .swiper .swiper-wrapper a{
         background-color: #eee;
         padding: 10px 35px;
     }
-    .search .container .choose .category li a{
+    .search .container .swiper .swiper-wrapper a{
         color: black;
         transition-delay: 0.5s;
         transition: 0.5s;
     }
-    .search .container .choose .category li:hover a{
+    .search .container .swiper .swiper-wrapper a:hover {
         color: #EED600;
         
     }
-    .search .container .choose .category li:hover {
+    .search .container .swiper .swiper-wrapper a:hover  {
         background-color: white;
         border: 2px solid #EED600;
     }
 }
-/* END SEARCH */
+
+.swiper {
+  max-width: 600px;
+  max-height: 300px;
+}
+/* END SWIPER */
+
+.pagination {
+    margin-top: var(--main-padding);
+    margin-bottom: var(--main-padding);
+    display: flex;
+    justify-content: flex-end;
+}
+.pagination a {
+  
+  color: black;
+  padding: 5px 12px;
+  text-decoration: none;
+  transition: 1s;
+  margin-right: 8px;
+  border: 1px solid #eee;
+}
+@media(max-width:767px){
+    .pagination{
+        max-width: 100%;
+    }
+    .pagination a {
+        padding: 3px 9px;
+
+}
+}
+
+.pagination a.active {
+  background-color: var(--main-color);
+  color: white;
+}
+.pagination a:hover:not(.active) {background-color: #ddd;}
 
 
 </style>

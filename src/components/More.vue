@@ -67,8 +67,9 @@
 
 .more .container .heading {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 140px;
+  justify-content: space-around;;
+  align-items: start;
+  margin-bottom: 30px;
 }
 .more .container .heading h2 {
   font-size: 40px;
@@ -79,6 +80,7 @@
   }
   .more .container .heading {
     justify-content: space-evenly;
+    flex-direction: column;
   }
 }
 .more .container .heading a {
@@ -88,6 +90,7 @@
 @media (max-width: 767px) {
   .more .container .heading a {
     margin-top: 10px;
+    font-size: 12px;
   }
 }
 .more .container .list {
@@ -96,29 +99,33 @@
 @media (max-width: 991px) {
   .more .container .list {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
   }
   .more .container .list .box img {
-    width:98%;
+    max-width: 98%;
   }
 }
 @media (max-width: 767px) {
   .more .container .list {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .more .container .list .box {
-    width: 98%;
+    max-width: 98%;
   }
   .more .container .list .box img {
-    width: 95%;
+    max-width: 95%;
   }
   
 }
 .more .container .list .box {
   margin-left: 20px;
   margin-right: 20px;
-  width: 100%;
+  max-width: 100%;
 
 }
 .more .container .list .box .p {
@@ -126,6 +133,11 @@
   justify-content: space-between;
   color: var(--main-paragraph-color);
   margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .more .container .list .box .p {
+    justify-content: space-evenly;
+  }
 }
 .more .container .list .box h2 {
   font-weight: normal;

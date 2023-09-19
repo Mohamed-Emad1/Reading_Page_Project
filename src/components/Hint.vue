@@ -148,5 +148,13 @@
     }
         
 }
+.hint .container .see{
+    text-align: center;
+    margin-top: 10px;
+    
+}
+.hint .container .see h2{
+    font-size: 30px;
+}
 /* END HINT */
 </style>

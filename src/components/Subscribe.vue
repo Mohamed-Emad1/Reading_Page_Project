@@ -52,6 +52,12 @@
   font-weight: normal;
   font-size: 48px;
 }
+@media(max-width:767px){
+
+  .subscribe .container h2 {
+    font-size: 30px;
+  }
+}
 
 .subscribe .container p {
   padding: 15px;
