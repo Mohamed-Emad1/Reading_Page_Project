@@ -150,7 +150,7 @@
         <!-- END REVIEW -->
 
     <!-- START MORE -->
-    <More/>
+    <More />
       <!-- END MORE -->
        <TheEnd/>
 
@@ -295,12 +295,6 @@ export default {
   
 }
 
-/* .useful .image{
-  background: linear-gradient(to bottom, #FECE2F15 ,#FECE2F00);
-  width: 100%;
-  height: 730px;
-  position: absolute;
-} */
 
 .useful .container .text{
   margin-top: 100px;
@@ -376,117 +370,6 @@ export default {
 }
 /* END USEFUL */
 
-
-/* START MORE */
-
-#app .more .container .heading{ 
-    display: none;
-  }
-  #app .more .container .heading-new{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #app .more .container .heading-new p{
-    color: var(--main-paragraph-color);
-  }
-
-
-
-/* .more {
-  padding-bottom: var(--main-padding);
-}
-
-.more .container .heading {
-  text-align: center;
-  margin-bottom: 60px;
-  margin-top: 50px;
-  border-top: 3px solid var(--border-color);
-}
-.more .container .heading p{
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--main-paragraph-color);
-
-}
-.more .container .heading h2 {
-  font-size: 24px;
-  font-weight: 600;
-}
-@media (max-width: 767px) {
-  .more .container .heading h2 {
-    font-size: 25px;
-  }
-  .more .container .heading {
-    justify-content: space-evenly;
-  }
-}
-.more .container .heading a {
-  color: var(--main-color);
-  font-size: 20px;
-}
-@media (max-width: 767px) {
-  .more .container .heading a {
-    margin-top: 10px;
-  }
-}
-.more .container .list {
-  display: flex;
-}
-.more .container .list .box {
-  margin-left: 20px;
-  margin-right: 20px;
-  width: 100%;
-
-}
-.more .container .list .box .p {
-  display: flex;
-  justify-content: space-between;
-  color: var(--main-paragraph-color);
-  margin-bottom: 15px;
-}
-.more .container .list .box h2 {
-  font-weight: normal;
-  font-size: 21px;
-}
-@media (min-width: 1199px) {
-  .more .container .list {
-    display: flex;
-    justify-content: center;
-  }
-  .more .container .list .box{
-    margin-left: 160px;
-  }
-  .more .container .list .box img {
-    max-width: 180%;
-  }
-}
-@media (max-width: 991px) {
-  .more .container .list {
-    display: flex;
-    justify-content: center;
-  }
-  .more .container .list .box img {
-    width: 98%;
-  }
-}
-@media (max-width: 767px) {
-  .more .container .list {
-    display: flex;
-    justify-content: center;
-  }
-  .more .container .list .box {
-    width: 98%;
-  }
-  .more .container .list .box img {
-    width: 95%;
-  }
-  
-} */
-
-/* END MORE */
 
 /* START REVIEW */
 .review{

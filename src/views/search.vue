@@ -16,117 +16,52 @@
     <!-- Search START -->
     <div class="search">
         <div class="container">
-
-            <!-- <swiper
-    :modules="modules"
-    :slides-per-view="3"
-    :space-between="50"
-    navigation
-    :pagination="{ clickable: true }"
-    :scrollbar="{ draggable: true }"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
-  >
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    ...
-  </swiper> -->
-
-
-
-
-
-
-
-            <h2>نتائج البحث عن : قرائة</h2>
-            <div class="list">
-                <div class="text">
-                    <h2>الأقسام</h2>
-                    <ul class="links">
-                        <li><a href="#">أدب</a></li>
-                        <li><a href="#">فلسفة</a></li>
-                        <li><a href="#">لغة</a></li>
-                        <li><a href="#">موسيقي</a></li>
-                        <li><a href="#">فن</a></li>
-                    
-                    </ul>
-                </div>
-
-                <div class="boxes">
-                <div class="box">
-                    <img src="../assets/Rectangle_114.png" alt="">
-                    <div class="text">
-                    <p>كتب بواسطة : أحمد السيد</p>
-                    <h2>فوائد القراءة اليومية</h2>
-                    <p>لقراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن أن تؤثر بشكل إيجابي على حياتنا.</p>
-                 <p class="phone">القراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية.</p>
-         <div class="last">
-             <p>2 فبراير 5 دقائق قراءة</p>
-             <p class="first">أدب</p>
-         </div>
-     </div>
-     </div>
-
-     <div class="box">
-         <img src="../assets/Rectangle_11_man.png" alt="">
-         <div class="text">
-         <p>كتب بواسطة : أحمد السيد</p>
-         <h2>فوائد القراءة اليومية</h2>
-         <p>لقراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن أن تؤثر بشكل إيجابي على حياتنا.</p>
-         <p class="phone">القراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية.</p>
-         <div class="last">
-             <p>2 فبراير 5 دقائق قراءة</p>
-             <p class="third">فلسفة</p>
-         </div>
-     </div>
-     </div>
-
-     <div class="box">
-         <img src="../assets/Rectangle_113.png" alt="">
-         <div class="text">
-         <p>كتب بواسطة : أحمد السيد</p>
-         <h2>فوائد القراءة اليومية</h2>
-         <p>لقراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن أن تؤثر بشكل إيجابي على حياتنا.</p>
-         <p class="phone">القراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية.</p>
-         <div class="last">
-             <p>2 فبراير 5 دقائق قراءة</p>
-             <p class="second">فن</p>
-         </div>
-     </div>
-     </div>
-
-     <div class="box">
-         <img src="../assets/Rectangle_11rd.png" alt="">
-         <div class="text">
-         <p>كتب بواسطة : أحمد السيد</p>
-         <h2>فوائد القراءة اليومية</h2>
-         <p>لقراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن أن تؤثر بشكل إيجابي على حياتنا.</p>
-                    <p class="phone">القراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية.</p>
-                    <div class="last">
-                        <p>2 فبراير 5 دقائق قراءة</p>
-                        <p class="first">أدب</p>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            </div>
-            <div class="pagination">         
-                <a class="active" href="#">التالي</a>
-                <a href="#">10</a>
-                <a href="#">...</a>
-                <a href="#">4</a>
-                <a href="#">3</a>
-                <a  href="#">2</a>
-                <a class="active" href="#">1</a>
-                <a href="#" style="color: var(--main-color); background-color: #EBEBEB82;">السابق</a>
-   </div>
+      <h2>نتائج البحث عن : قرائة</h2>
+      <div class="list">
+        <div class="text">
+          <h2>الأقسام</h2>
+          <ul class="links">
+            <li><a href="#">أدب</a></li>
+            <li><a href="#">فلسفة</a></li>
+            <li><a href="#">لغة</a></li>
+            <li><a href="#">موسيقي</a></li>
+            <li><a href="#">فن</a></li>
+          </ul>
         </div>
+        <div class="boxes">
+          <div class="box" v-for="book in books" :key="book.id">
+            <img :src="book.image" alt="book">
+            <div class="text">
+              <p>كتب بواسطة : {{ book.author }}</p>
+              <h2>{{ book.title }}</h2>
+              <p>{{ book.description }}</p>
+              <p class="phone">{{ book.descriptionPhone }}</p>
+              <div class="last">
+                <p>{{ book.date }}</p>
+                <p :class="getCategoryClass(book.category)">{{ book.category }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pagination">         
+    <a class="active" href="#">التالي</a>
+    <a href="#">10</a>
+    <a href="#">...</a>
+    <a href="#">4</a>
+    <a href="#">3</a>
+    <a  href="#">2</a>
+    <a class="active" href="#">1</a>
+    <a href="#" style="color: var(--main-color); background-color: #EBEBEB82;">السابق</a>
+</div>
+    </div>
     </div>
      <TheEnd/>
     </div>
 </template>
+
+
+
 
 <script>
 import navPar from '@/components/navPar.vue';
@@ -160,12 +95,87 @@ export default {
         modules: [Navigation, Pagination, Scrollbar, A11y],
       };
     },
+
+    data() {
+    return {
+      books: [
+        {
+        id: 1,
+        image: require("../assets/Rectangle_114.png"),
+        author: "أحمد السيد",
+        title: "فوائد القراءة اليومية",
+        description: "لقراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن أن تؤثر بشكل إيجابي على حياتنا.",
+        descriptionPhone: "القراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية.",
+        category: "أدب",
+        date: "2 فبراير 5 دقائق قراءة"
+            },
+            {
+                id: 2,
+        image: require("../assets/Rectangle_11man.png"),
+        author: "أحمد السيد",
+        title: "فوائد القراءة اليومية",
+        description: "لقراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن أن تؤثر بشكل إيجابي على حياتنا.",
+        descriptionPhone: "القراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية.",
+        category: "فن",
+        date: "2 فبراير 5 دقائق قراءة"
+            },
+            {
+                id: 3,
+        image: require("../assets/Rectangle_113.png"),
+        author: "أحمد السيد",
+        title: "فوائد القراءة اليومية",
+        description: "لقراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن أن تؤثر بشكل إيجابي على حياتنا.",
+        descriptionPhone: "القراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية.",
+        category: "فلسفة",
+
+        date: "2 فبراير 5 دقائق قراءة"
+            },
+            {
+                id: 4,
+        image: require("../assets/Rectangle_11rd.png"),
+        author: "أحمد السيد",
+        title: "فوائد القراءة اليومية",
+        description: "لقراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن أن تؤثر بشكل إيجابي على حياتنا.",
+        descriptionPhone: "القراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية.",
+        category: "أدب",
+        date: "2 فبراير 5 دقائق قراءة"
+        },
+        // Add more book objects here
+      ]
+    };
+    },
+    methods: {
+        getCategoryClass(category)
+        {
+            if (category === "أدب")
+            {
+                return "category-1";
+            } else if (category === "فن")
+            {
+                return "category-2";
+            } else if (category === "فلسفة")
+            {
+                return "category-3";
+            } 
+        }
+    }
     
 };
 
 </script>
 
 <style scoped>
+/* START COLORS OF CATEGORIES */
+.search .container .boxes .box .text .category-1 {
+  color: var(--main-color);
+}
+.search .container .boxes .box .text .category-2 {
+  color: #EED600;
+}
+.search .container .boxes .box .text .category-3 {
+  color: #ED0287;
+}
+/* END COLORS OF CATEGORIES */
 .search{
     padding-top: var(--main-padding);
 }
@@ -302,12 +312,13 @@ export default {
     max-width: 500px;
     line-height: 1.8;
 }
-.search .container .list .box .text .phone{
+/* .search .container .list .box .text .phone{
     display: none;
-}
+} */
 @media(max-width:991px){
     .search .container .list .box .text p:nth-child(3){
-        display: none;
+        display: none;   
+         /* this the discreption  */
     }
 }
 @media(max-width:767px){
@@ -414,6 +425,7 @@ export default {
 
 }
 }
+
 
 .pagination a.active {
   background-color: var(--main-color);

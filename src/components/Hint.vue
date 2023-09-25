@@ -21,6 +21,7 @@
                     <div class="image">
                     <img src="../assets/Rectangle_647.png" alt="group">
                 </div>
+                <div class="two">
                 <div class="box">
                     <div class="goals"></div>
                       <h2>اهدفنا</h2>
@@ -31,6 +32,7 @@
                          <p>نطمح إلى تشجيع ثقافة القراءة وإثراء المعرفة في المجتمع العربي. نسعى لأن نصبح المصدر الرئيسي والموجه لكل محبي القراءة في العالم العربي، ونسهم في بناء جيل قارئ مثقف ومبدع.</p>
  
                     </div>
+                </div>
                 </div>
                 </div>
             </div>   
@@ -132,12 +134,9 @@
     font-size: 43px;
     font-weight: 400;
     margin-bottom: 10px;
+    border-bottom: 2px solid #FECE2F;
 }
-.hint .container .box p{
-    width: 90%;
-    line-height: 1.8;
-    color: var(--main-paragraph-color);
-}
+
 @media(max-width:767px){
     .hint .container .box{
         display: flex;
@@ -155,15 +154,31 @@
     
 }
 .hint .container .see h2{
-    font-size: 40px;
+    font-size: 43px;
     font-weight: 400;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #FECE2F;
+    width: fit-content;
+    margin: 0px auto;
 }
 
-/* @media(max-width:767px){
-    .hint .container .text h2 span .gradient::before{
+.hint .container .two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hint .container .two p{
+    line-height: 1.8;
+    color: var(--main-paragraph-color);
+    width: 90%;
+}
 
+@media(max-width:767px){
+    .hint .container .two{
+        flex-direction: column;
     }
-} */
+    }
+
 
 
 /* END HINT */

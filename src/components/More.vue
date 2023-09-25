@@ -11,44 +11,24 @@
         <!-- START MORE -->
         <div class="more">
           <div class="container">
-            <div class="heading">
-              <h2>الأكثر<span class="gradient"> قراءة</span></h2>
-              <a href="">عرض الجميع</a>
-            </div>
-            <div class="heading-new">
-              <a href=""><p>إقرأ المزيد</p></a>
-              <h2>مواضيع ذات صلة</h2>
-            </div>
+            <div class="heading" v-if="pageType === 'heading'">
+          <h2>الأكثر<span class="gradient"> قراءة</span></h2>
+          <a href="">عرض الجميع</a>
+        </div>
+        <div class="heading-new" v-else>
+          <a href=""><p>إقرأ المزيد</p></a>
+          <h2>مواضيع ذات صلة</h2>
+        </div>
             <div class="list">
-              <div class="box">
+              <div class="box" v-for="book in books" :key="book.id">
                 <div class="image">
-                  <img src="../assets/Rectangle_13.png" alt="" />
+                  <img :src="book.image" alt="image" />
                 </div>
                 <div class="p">
-                  <p>2 فبراير <span>5 دقائق قراءة</span></p>
-                  <p>كتب بواسطة : أحمد السيد</p>
+                  <p>{{ book.date }}</p>
+                  <p>كتب بواسطة :  {{ book.author }}</p>
                 </div>
-                <h2>اليوم العالمي للغة العربية</h2>
-              </div>
-              <div class="box">
-                <div class="image">
-                  <img src="../assets/Rectangle_14.png" alt="" />
-                </div>
-                <div class="p">
-                  <p>2 فبراير <span>5 دقائق قراءة</span></p>
-                  <p>كتب بواسطة : أحمد السيد</p>
-                </div>
-                <h2>كتب تعريفك بتراث وتقاليد الشعوب</h2>
-              </div>
-              <div class="box">
-                <div class="image">
-                  <img src="../assets/Rectangle_15.png" alt="" />
-                </div>
-                <div class="p">
-                  <p>2 فبراير <span>5 دقائق قراءة</span></p>
-                  <p>كتب بواسطة : أحمد السيد</p>
-                </div>
-                <h2>جولة في عالم الأدب العربي</h2>
+                <h2>{{ book.description }}</h2>
               </div>
             </div>
           </div>
@@ -58,8 +38,46 @@
 </template>
 
 <script>
-    export default {
-        
+export default {
+  props: {
+    pageType: {
+      type: String,
+      required: true
+    }
+  },
+      data() {
+    return {
+      books: [
+        {
+        id: 1,
+        image: require("../assets/Rectangle_13.png"),
+        author: "أحمد السيد",
+        description: "اليوم العالمي للغة العربية",
+        date: "2 فبراير 5 دقائق قراءة"
+            },
+            {
+                id: 2,
+        image: require("../assets/Rectangle_14.png"),
+        author: "أحمد السيد",
+        description: "كتب تعريفك بتراث وتقاليد الشعوب",
+        date: "2 فبراير 5 دقائق قراءة"
+            },
+            {
+                id: 3,
+        image: require("../assets/Rectangle_15.png"),
+        author: "أحمد السيد",
+        description:"جولة في عالم الأدب العربي",
+        date: "2 فبراير 5 دقائق قراءة"
+            },
+        // Add more book objects here
+      ]
+    };
+  },
+  // computed: {
+  //   showHeadingNew() {
+  //     return this.pageType === "heading-new";
+  //   }
+  // },
     }
 </script>
 
@@ -104,6 +122,14 @@
     font-size: 12px;
   }
 }
+.more .container .heading-new{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.more .container .heading-new p{
+    color: var(--main-paragraph-color);
+  }
 .more .container .list {
   display: flex;
 }

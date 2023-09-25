@@ -16,24 +16,21 @@
               <a href="">عرض الجميع</a>
             </div>
             <div class="sections">
-              <div class="section">
+              <div class="section" v-for ="book in books" :key="book.id">
                 <div class="image">
-                  <img src="../assets/Rectangle_11more.png" alt="" />
+                  <img :src="book.image" alt="image" />
                 </div>
                 <div class="text">
-                  <p>كتب بواسطة : أحمد السيد</p>
-                  <h2>فوائد القراءة اليومية</h2>
+                  <p>كتب بواسطة : {{ book.author }}</p>
+                  <h2>{{ book.title }}</h2>
                   <p>
-                    القراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن
-                    القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير
-                    الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن
-                    أن تؤثر بشكل إيجابي على حياتنا.
+                    {{ book.description }}
                   </p>
                   <a href="#">أقرأ المزيد</a>
-                  <p>2 فبراير <span>5 دقائق قراءة</span></p>
+                  <p>{{ book.date }}</p>
                 </div>
               </div>
-              <div class="section">
+              <!-- <div class="section">
                 <div class="image">
                   <img src="../assets/Rectangle_12.png" alt="" />
                 </div>
@@ -49,7 +46,7 @@
                   <a href="#">أقرأ المزيد</a>
                   <p>2 فبراير <span>5 دقائق قراءة</span></p>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -59,7 +56,29 @@
 
 <script>
     export default {
-        
+      data() {
+    return {
+      books: [
+        {
+              id: 1,
+        image: require("../assets/Rectangle_home.png"),
+        author: "أحمد السيد",
+        title: "فوائد القراءة اليومية",
+        description: "لقراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن أن تؤثر بشكل إيجابي على حياتنا.",
+        date: "2 فبراير 5 دقائق قراءة"
+        },
+
+        {
+                id: 2,
+        image: require("../assets/Rectangle_12.png"),
+        author: "أحمد السيد",
+        title: "فوائد القراءة اليومية",
+        description: "لقراءة هي نشاط ممتع ومفيد يعزز التعلم والتنمية الشخصية. إن القراءة اليومية لها تأثير كبير على حياتنا وتعزز الذكاء والتفكير الإبداعي. في هذا المقال، سنستكشف فوائد القراءة اليومية وكيف يمكن أن تؤثر بشكل إيجابي على حياتنا.",        date: "2 فبراير 5 دقائق قراءة"
+        },
+            
+      ]
+    };
+    },
     }
 </script>
 

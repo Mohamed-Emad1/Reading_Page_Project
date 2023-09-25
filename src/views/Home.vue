@@ -14,7 +14,7 @@
          <div><Landing/></div>
          <div><Section/></div>
          <div><New/></div>
-         <div><More/></div>
+         <div><More :pageType="pageType"/></div>
          <div><Subscribe/></div>
        <div><TheEnd/></div>
 
@@ -40,11 +40,12 @@ export default {
       Section,
       New,
       Subscribe  
-    }       
+  },
+  data() {
+    return {
+      pageType: 'heading' // or 'heading-new' or any other value
+    };
+  }       
         
     }
 </script>
-
-<style >
-
-</style>

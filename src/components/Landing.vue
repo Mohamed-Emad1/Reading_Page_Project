@@ -19,19 +19,19 @@
 </svg></i>
               <input type="text" placeholder="بحث" id="search2">
             </form>
-            <div class="boxes">
+            <div class="boxes" >
               <div class="two">
-                <div class="box">
-                  <img src="../assets/Rectangle_3.png" alt="" class="img3" />
+                <div class="box" v-for="book in booksTwo" :key="book.id">
+                  <img :src="book.image" alt="image" class="img3" />
                   <div class="text">
                     <div class="paragraph">
-                      <span>2 فبراير . 5 دقائق قراءة</span>
-                      <span>كتب بواسطة احمد السيد</span>
+                      <span>{{ book.date }}</span>
+                      <span>كتب بواسطة :{{ book.author }}</span>
                     </div>
-                    <h2 class="normal">تعزيز التفكير النقدي من خلال القراءة</h2>
+                    <h2 class="normal">{{ book.description }}</h2>
                   </div>
                 </div>
-                <div class="box">
+                <!-- <div class="box">
                   <img src="../assets/Rectangle_4.png" alt="" class="img4" />
                   <div class="text">
                     <div class="paragraph">
@@ -40,17 +40,17 @@
                     </div>
                     <h2 class="normal">رجلة ممتعة لاكتشاف التراث</h2>
                   </div>
-                </div>
+                </div> -->
               </div>
-              <div class="box">
-                <a href="" id="use"><img src="../assets/Rectangle_2.png" alt="" class="img2" /></a>
+              <div class="box" v-for="book in booksOne" :key="book.id">
+                <a href="" id="use"><img :src="book.image" alt="image" class="img2" /></a>
                 
                 <div class="text">
                   <div class="paragraph">
-                    <span>2 فبراير . 5 دقائق قراءة</span>
-                    <span>كتب بواسطة احمد السيد</span>
+                    <span>{{ book.date }}</span>
+                    <span>كتب بواسطة : {{ book.author }}</span>
                   </div>
-                  <h2 class="big">فوائد القراءة اليومية</h2>
+                  <h2 class="big">{{ book.description }}</h2>
                 </div>
               </div>
             </div>
@@ -79,7 +79,39 @@ import { useRouter } from 'vue-router';
           e.preventDefault();
           router.push('/useful')
         }
-  }
+  },
+  data() {
+    return {
+      booksTwo: [
+        {
+              id: 1,
+        image: require("../assets/Rectangle_3.png"),
+        author: "أحمد السيد",
+        description: "تعزيز التفكير النقدي من خلال القراءة",
+        date: "2 فبراير 5 دقائق قراءة"
+        },
+
+        {
+          id: 2,
+          image: require("../assets/Rectangle_4.png"),
+          author: "أحمد السيد",
+          description: "رحلة ممتعة لاكتشاف التراث",
+          date: "2 فبراير 5 دقائق قراءة"
+        }
+            
+      ],
+      booksOne: [
+        {
+      id: 3,
+        image: require("../assets/Rectangle_2.png"),
+        author: "أحمد السيد",
+          description: "فوائد القراءة اليومية",
+          date: "2 فبراير 5 دقائق قراءة"
+        
+        },
+      ]
+    };
+    },
     }
 </script>
 
