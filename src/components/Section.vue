@@ -63,8 +63,8 @@
     export default {
         mounted() {
           let scrollable = document.querySelector(".list");
-let arrowAfter = document.querySelector(".arrow");
-let arrowBefore = document.querySelector(".bearrow");
+// let arrowAfter = document.querySelector(".arrow");
+// let arrowBefore = document.querySelector(".bearrow");
 
 
 scrollable.addEventListener("wheel", (evt) => {
@@ -74,13 +74,13 @@ scrollable.addEventListener("wheel", (evt) => {
 });
 
 
-arrowAfter.addEventListener("click", () =>{
-    scrollable.scrollLeft += 1046;
-});
+// arrowAfter.addEventListener("click", () =>{
+//     scrollable.scrollLeft += 1046;
+// });
 
-arrowBefore.addEventListener("click", () =>{
-    scrollable.scrollLeft -= 1046;
-});
+// arrowBefore.addEventListener("click", () =>{
+//     scrollable.scrollLeft -= 1046;
+// });
         },
     }
 </script>
