@@ -13,45 +13,48 @@
           <div class="container">
             <h3 class="head"><span class="gradient">الأقسام</span></h3>
             <div class="gallery">
-              <!-- <img src="../assets/Arrow_2.png" alt="" id="arrow" /> -->
+              
               <div class="list">
+                <swiper class="ls" :slides-per-view="isMobile ? 2 : 4" :space-between="20" :slidesPerGroup="1" :modules="modules" @swiper="onSwiper" @slideChange="onSlideChange" navigation>
+                
+                  <swiper-slide >
                 <div class="element">
-                  <img src="../assets/Rectangle_10.png" alt="" />
-                  <div class="overlay">
-                    <img src="../assets/Rectangle_18.png" alt="" />
-                  </div>
+                  <img class="move" src="../assets/Rectangle_10.png" alt="" />
+                  
                   <h2>تاريخ</h2>
                 </div>
+              </swiper-slide>
+                <swiper-slide>
                 <div class="element">
-                  <img src="../assets/Rectangle_9.png" alt="" />
-                  <div class="overlay">
-                    <img src="../assets/Rectangle_18.png" alt="" />
-                  </div>
+                  <img class="move" src="../assets/Rectangle_9.png" alt="" />
+                
                   <h2>أدب</h2>
                 </div>
+              </swiper-slide>
+                <swiper-slide>
                 <div class="element">
-                  <img src="../assets/Rectangle_8.png" alt="" />
-                  <div class="overlay">
-                    <img src="../assets/Rectangle_18.png" alt="" />
-                  </div>
+                  <img class="move" src="../assets/Rectangle_8.png" alt="" />
+      
                   <h2>شعر</h2>
                 </div>
+              </swiper-slide>
+                <swiper-slide>
                 <div class="element">
-                  <img src="../assets/Rectangle_7.png" alt="" />
-                  <div class="overlay">
-                    <img src="../assets/Rectangle_18.png" alt="" />
-                  </div>
+                  <img class="move" src="../assets/Rectangle_7.png" alt="" />
+                
                   <h2>فنون</h2>
                 </div>
+              </swiper-slide>
+                <swiper-slide>
                 <div class="element">
-                  <img src="../assets/Rectangle_6.png" alt="" />
-                  <div class="overlay">
-                    <img src="../assets/Rectangle_18.png" alt="" />
-                  </div>
+                  <img class="move" src="../assets/Rectangle_6.png" alt="" />
+                
                   <h2>فلسفة</h2>
                 </div>
+              </swiper-slide>
+              </swiper>
               </div>
-              <!-- <img src="../assets/Arrow_1.png" alt="" id="bearrow" /> -->
+  
             </div>
           </div>
         </div>
@@ -60,29 +63,46 @@
 </template>
 
 <script>
-    export default {
-        mounted() {
-          let scrollable = document.querySelector(".list");
-// let arrowAfter = document.querySelector(".arrow");
-// let arrowBefore = document.querySelector(".bearrow");
+import { ref, onMounted } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation } from 'swiper/modules';
+// Import Swiper styles
 
+import 'swiper/css';
+import 'swiper/css/navigation';
 
-scrollable.addEventListener("wheel", (evt) => {
-    evt.preventDefault();
-    scrollable.scrollLeft += evt.deltaY;
-    scrollable.style.scrollBehavior = "smooth";
-});
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    const isMobile = ref(window.innerWidth <= 991);
 
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
 
-// arrowAfter.addEventListener("click", () =>{
-//     scrollable.scrollLeft += 1046;
-// });
+    const onSlideChange = () => {
+      console.log('slide change');
+    };
 
-// arrowBefore.addEventListener("click", () =>{
-//     scrollable.scrollLeft -= 1046;
-// });
-        },
-    }
+    onMounted(() => {
+      window.addEventListener('resize', updateIsMobile);
+    });
+
+    const updateIsMobile = () => {
+      isMobile.value = window.innerWidth <= 991;
+    };
+
+    return {
+      isMobile,
+      onSwiper,
+      onSlideChange,
+      modules: [Navigation],
+    };
+  },
+};
 </script>
 
 <style scoped>
@@ -90,6 +110,7 @@ scrollable.addEventListener("wheel", (evt) => {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
 }
+
 .sections .container .head {
   font-family: Cairo;
   font-size: 48px;
@@ -107,51 +128,60 @@ scrollable.addEventListener("wheel", (evt) => {
 }
 .sections .container .gallery {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .sections .container .list {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.sections .container .list .swiper{
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
 }
 @media (max-width: 767px) {
-  .sections .container .list {
-    width: 200px;
+  /* .sections .container .list .ls{
+    max-width: 100%;
+  } */
+  .sections .container .list .ls .swiper-slide {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
   }
 }
-.sections .container .gallery > img {
-  cursor: pointer;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
+
+@media (max-width: 767px) {
+  .sections .container .list .element img {
+    max-width: 100%;
+  }
 }
-.sections .container .gallery::-webkit-scrollbar {
-  display: none;
+.sections .container .list .element img {
+  position: relative;
+  filter: brightness(50%); 
 }
-.sections .container .list > img:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
+.sections .container .list .element img:hover {
+  filter: brightness(100%);
 }
 .sections .container .gallery > img:nth-child(1) {
   margin-left: 25px;
 }
 @media(max-width:767px){
   .sections .container .gallery{
-    max-width: 100%;
+    max-width: 90%;
     justify-content: center;
   }
-  .sections .container .gallery > img:nth-child(1) {
-    margin-left: -62px;
+  .sections .container .gallery  img:nth-child(1) {
+    margin-left: -10px;
   }
   .sections .container .gallery :last-child {
-    margin-right: -58px;
+    margin-right: -10px;
   }
 }
 .sections .container .list .element {
@@ -161,7 +191,7 @@ scrollable.addEventListener("wheel", (evt) => {
 
 .sections .container .list .element h2 {
   position: absolute;
-  left: 50%;
+  left: 40%;
   top: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -170,13 +200,35 @@ scrollable.addEventListener("wheel", (evt) => {
   -o-transform: translate(-50%, -50%);
   color: white;
 }
+@media (min-width: 767px)  {
+  .sections .container .list .element h2 {
+    left:70%;
+    /* margin-left: 20px; */
+  }
+}
+
+@media (min-width: 992px)  {
+  .sections .container .list .element h2 {
+    left: 50%;
+    /* margin-left: -15px; */
+  }
+}
+@media (min-width: 1200px)  {
+  .sections .container .list .element h2 {
+    left: 60%;
+    top: 47%;
+    /* margin-left: 25px; */
+  }
+}
 .sections .container .list .element img {
   position: relative;
 }
-.sections .container .list .element .overlay img {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+.sections .container .list .element img:hover{
+  z-index: 12;
 }
+.sections .container .list .element h2{
+  z-index: 17;
+}
+
 
 </style>
