@@ -9,20 +9,20 @@
       rel="stylesheet"
     />
     <div class="who">
-         <div><navPar/></div>
+         <div><navigationB/></div>
          <div><Data/></div>
-     <div><TheEnd/></div>
+     <div><Footer/></div>
     </div>
 </template>
 
 <script>
-import navPar from '@/components/navPar.vue';
-import TheEnd from '@/components/TheEnd.vue';
+import navigationB from '@/components/navigationB.vue';
+import Footer from '@/components/Footer.vue';
 import Data from '@/components/Data.vue';
     export default {
         components: {
-        navPar,
-        TheEnd,
+            navigationB,
+        Footer,
         Data,
     }
     }

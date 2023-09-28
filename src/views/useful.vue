@@ -8,7 +8,7 @@
        rel="stylesheet"
      />
     <div class="useful">
-       <navPar/>
+       <navigationB/>
         <!-- START USEFUL -->
     <div class="useful">
         
@@ -154,19 +154,19 @@
     <!-- START MORE -->
     <More />
       <!-- END MORE -->
-       <TheEnd/>
+       <Footer/>
 
     </div>
 </template>
 
 <script>
 import More from '@/components/More.vue';
-import navPar from '@/components/navPar.vue';
-import TheEnd from '@/components/TheEnd.vue';
+import navigationB from '@/components/navigationB.vue';
+import Footer from '@/components/Footer.vue';
 export default {
   components: {
-    navPar,
-    TheEnd,
+    navigationB,
+    Footer,
     More
   },
   Data() {

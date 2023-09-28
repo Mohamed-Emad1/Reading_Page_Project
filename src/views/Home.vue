@@ -10,20 +10,20 @@
      />
     <div class="home">
 
-       <div><navPar/></div>
+       <div><navigationB/></div>
          <div><Landing/></div>
          <div><Section/></div>
          <div><New/></div>
          <div><More :pageType="pageType"/></div>
          <div><Subscribe/></div>
-       <div><TheEnd/></div>
+       <div><Footer/></div>
 
     </div>
 </template>
 
 <script>
-import navPar from '@/components/navPar.vue';
-import TheEnd from '@/components/TheEnd.vue';
+import navigationB from '@/components/navigationB.vue';
+import Footer from '@/components/Footer.vue';
 import Landing from '@/components/Landing.vue';
 import More from '@/components/More.vue';
 import New from '@/components/New.vue';
@@ -33,8 +33,8 @@ import Subscribe from '@/components/Subscribe.vue';
 export default {
     name: 'الرئيسية',
     components: {
-      navPar,
-      TheEnd,
+      navigationB,
+      Footer,
       Landing,
       More,
       Section,

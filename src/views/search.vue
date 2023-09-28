@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <div class="search">
-    <navPar/>
+    <navigationB/>
     <!-- Search START -->
     <div class="search">
         <div class="container">
@@ -69,7 +69,7 @@
 </div>
     </div>
     </div>
-     <TheEnd/>
+     <Footer/>
     </div>
 </template>
 
@@ -77,8 +77,8 @@
 
 
 <script>
-import navPar from '@/components/navPar.vue';
-import TheEnd from '@/components/TheEnd.vue';
+import navigationB from '@/components/navigationB.vue';
+import Footer from '@/components/Footer.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 // import { Navigation } from 'swiper/modules';
 // Import Swiper styles
@@ -88,8 +88,8 @@ import 'swiper/css';
 
 export default {
   components: {
-    navPar,
-    TheEnd,
+    navigationB,
+    Footer,
     Swiper,
     SwiperSlide,
   },

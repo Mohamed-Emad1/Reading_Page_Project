@@ -9,24 +9,24 @@
       rel="stylesheet"
     />
    <div class="راسلنا">
-   <div><navPar/></div> 
+   <div><navigationB/></div> 
       <div><Hint/></div> 
          <div><Logos/></div> 
             <div><Team/></div> 
-   <div><TheEnd/></div>
+   <div><Footer/></div>
    </div>
 </template>
 
 <script>
-import navPar from '@/components/navPar.vue';
-import TheEnd from '@/components/TheEnd.vue';
+import navigationB from '@/components/navigationB.vue';
+import Footer from '@/components/Footer.vue';
 import Logos from '@/components/Logos.vue';    
 import Hint from '@/components/Hint.vue';
 import Team from '@/components/Team.vue';
 export default {
     components: {
-        navPar,   
-        TheEnd,
+      navigationB,   
+        Footer,
         Hint,
         Logos,
         Team,
