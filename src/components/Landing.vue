@@ -172,9 +172,10 @@ import { useRouter } from 'vue-router';
 @media (max-width: 991px) {
   .two {
     display: flex;
+    flex-wrap: wrap;
   }
   .two img {
-    max-width: 100%;
+    max-width: 90%;
     max-height: 100%;
   }
 }
@@ -183,7 +184,7 @@ import { useRouter } from 'vue-router';
 }
 
 .landing .container .boxes .box .img2 {
-  max-width: 100%;
+  max-width: 90%;
   max-height: 400px;
 }
 @media(max-width:991px){

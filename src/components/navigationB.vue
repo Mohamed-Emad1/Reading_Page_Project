@@ -225,6 +225,11 @@ header .container .logo img {
   border-style: none;
   height: 65px;
 }
+@media (min-width: 767px) {
+  header .container .logo img {
+    margin-left: 10px;
+  }
+}
 @media (min-width: 992px) {
   header .container .toggle-menu {
     display: none;

@@ -161,6 +161,9 @@ export default {
   .sections .container .list .element img {
     max-width: 100%;
   }
+  .sections .container .list .ls{
+    text-align: center;
+  }
 }
 .sections .container .list .element img {
   position: relative;
