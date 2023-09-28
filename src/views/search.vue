@@ -16,8 +16,21 @@
     <!-- Search START -->
     <div class="search">
         <div class="container">
+            <swiper class="ls" :slides-per-view="3" :space-between="30" :slidesPerGroup="3" :modules="modules" @swiper="onSwiper" @slideChange="onSlideChange" >
+            
+                
+                    <swiper-slide v-for="(category, index) in categories" :key="index">
+            <li :class="{ press: activeCategory === category }" @click="setActiveCategory(category)">
+              <a href="#">{{ category }}</a>
+            </li>
+          </swiper-slide>
+
+                
+            
+        </swiper>
       <h2>نتائج البحث عن : قرائة</h2>
       <div class="list">
+        
         <div class="text">
           <h2>الأقسام</h2>
           <ul class="links">
@@ -66,33 +79,32 @@
 <script>
 import navPar from '@/components/navPar.vue';
 import TheEnd from '@/components/TheEnd.vue';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+// import { Navigation } from 'swiper/modules';
+// Import Swiper styles
+
 import 'swiper/css';
-  import 'swiper/css/navigation';
-  import 'swiper/css/pagination';
-  import 'swiper/css/scrollbar';
+// import 'swiper/css/navigation';
 
 export default {
   components: {
     navPar,
-        TheEnd,
-        components: {
-            Swiper,
-                SwiperSlide,
-    },
+    TheEnd,
+    Swiper,
+    SwiperSlide,
   },
   setup() {
-      const onSwiper = (swiper) => {
-        console.log(swiper);
-      };
-      const onSlideChange = () => {
-        console.log('slide change');
-      };
+    const onSwiper = (swiper) => {
+      // console.log(swiper);
+    };
+
+    const onSlideChange = () => {
+      console.log('slide change');
+    };
       return {
         onSwiper,
-        onSlideChange,
-        modules: [Navigation, Pagination, Scrollbar, A11y],
+      onSlideChange,
+    //   modules: [Navigation],
       };
     },
 
@@ -141,7 +153,9 @@ export default {
         date: "2 فبراير 5 دقائق قراءة"
         },
         // Add more book objects here
-      ]
+        ],
+        categories: ['أدب', 'فلسفة', 'لغة', 'فن', 'الكل'],
+        activeCategory: 'الكل',
     };
     },
     methods: {
@@ -157,7 +171,10 @@ export default {
             {
                 return "category-3";
             } 
-        }
+        },
+        setActiveCategory(category) {
+      this.activeCategory = category;
+    },
     }
     
 };
@@ -426,12 +443,37 @@ export default {
 }
 }
 
-
 .pagination a.active {
   background-color: var(--main-color);
   color: white;
 }
 .pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+.search .container .swiper{
+    display: none;
+}
+.search .container .swiper a{
+    margin-left: 10px;
+    background-color: #EEEEEE;
+    padding: 5px 10px;
+}
+@media(max-width:991px){
+    .search .container .swiper{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+}
+.search .container .swiper  li .press{
+    background-color: white;
+    color: #FECE2F;
+    border: 1px solid #FECE2F;
+}
+
 
 
 </style>

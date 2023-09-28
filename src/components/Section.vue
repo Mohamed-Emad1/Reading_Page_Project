@@ -80,7 +80,7 @@ export default {
     const isMobile = ref(window.innerWidth <= 991);
 
     const onSwiper = (swiper) => {
-      console.log(swiper);
+      // console.log(swiper);
     };
 
     const onSlideChange = () => {

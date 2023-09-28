@@ -11,9 +11,10 @@
        <navPar/>
         <!-- START USEFUL -->
     <div class="useful">
-        <div class="image">
-        </div>
+        
+      <div class="image">
         <div class="container">
+       
             <div class="text">
                 <h2>فوائد القراءة اليومية</h2>
                 <div class="last">
@@ -62,6 +63,7 @@
                     <br> تبقى القراءة رحلة سحرية ومثيرة في اكتشاف العالم العربي والثقافات الأخرى. إنها أداة قوية لتوسيع آفاقنا وتنمية ذواتنا. تُعَدُّ القراءة مصدرًا للمعرفة والترفيه والإلهام. لذا، لنستمتع بسحر القراءة ونستفيد من فوائدها العديدة في حياتنا اليومية. ليكن الكتاب رفيقًا لنا في رحلتنا، وليساعدنا في بناء عالمنا الداخلي وتحقيق طموحاتن</p>
             </div>
         </div>
+      </div>
         </div>
     </div>
 
@@ -293,6 +295,9 @@ export default {
   flex-direction: column;
   justify-content: center;
   
+}
+.useful .image{
+  background-image: linear-gradient(#f6f2cc,white)
 }
 
 
